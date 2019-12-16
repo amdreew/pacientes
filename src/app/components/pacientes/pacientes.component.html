@@ -1,0 +1,275 @@
+<mat-toolbar>
+  <span>NUEVO PACIENTE</span>
+
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button tabIndex="-1">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-toolbar>
+<!--#3498DB #2ECC71-->
+
+<div class="row my-2">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <form class="normal-form">
+          <mat-grid-list cols="1">
+            <mat-grid-tile>
+              <div class="controles-container">
+                <div class="row fila">
+                  <div class="col-md-12 my-2">
+                    <mat-expansion-panel [expanded]="true">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <span class="acoordion-title"
+                            >INFORMACION GENERAL DEL PACIENTE</span
+                          >
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <div class="row">
+                        <div class="col-md-5">
+                          <mat-form-field>
+                            <input matInput placeholder="Identificación *" />
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <mat-select placeholder="Tipo de Identificación">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-4">
+                          <mat-form-field>
+                            <input matInput placeholder="Lugar Expedición *" />
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <input matInput placeholder="Primer Nombre *" />
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <input matInput placeholder="Segundo Nombre " />
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <input matInput placeholder="Primer Apellido *" />
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <input matInput placeholder="Segundo Apellido *" />
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <input
+                              matInput
+                              [matDatepicker]="picker"
+                              placeholder="Fecha de Nacimiento"
+                            />
+                            <mat-datepicker-toggle
+                              matSuffix
+                              [for]="picker"
+                            ></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-2">
+                          <mat-form-field>
+                            <mat-select placeholder="Uniddad de Medida">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-2">
+                          <mat-form-field>
+                            <input
+                              matInput
+                              placeholder="Edad*"
+                              [readonly]="true"
+                            />
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-2">
+                          <mat-form-field>
+                            <mat-select placeholder="Sexo *">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <mat-select placeholder="Zona *">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-2">
+                          <mat-form-field>
+                            <mat-select placeholder="Estrato Social *">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-2">
+                          <mat-form-field>
+                            <mat-select placeholder="Estado Civil*">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-2">
+                          <mat-form-field>
+                            <input matInput placeholder="Ingresos $Cop *" />
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <mat-select placeholder="Nivel Educativo *">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <mat-select placeholder="Perten. Etnica *">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <mat-action-row>
+                        <span
+                          ><small
+                            >Por favor marque todos los camos requeridos</small
+                          ></span
+                        >
+                      </mat-action-row>
+                    </mat-expansion-panel>
+                  </div>
+                  <div class="col-md-12 my-2">
+                    <mat-expansion-panel [expanded]="false">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <span class="acoordion-title"
+                            >INFORMACION DE CONTRATOS Y EPS</span
+                          >
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <app-paciente-contratos></app-paciente-contratos>
+                          <div class="row sisben">
+                            <div class="col-md-3">
+                              <mat-form-field>
+                                <mat-select placeholder="Nivel Sisben *">
+                                  <mat-option>None</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                              <mat-form-field>
+                                <input
+                                  matInput
+                                  [matDatepicker]="picker2"
+                                  placeholder="Fecha afiliación"
+                                />
+                                <mat-datepicker-toggle
+                                  matSuffix
+                                  [for]="picker2"
+                                ></mat-datepicker-toggle>
+                                <mat-datepicker #picker2></mat-datepicker>
+                              </mat-form-field>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3"></div>
+                          </div>                          
+                        </div>
+                      </div>
+                      <mat-action-row>
+                        <span
+                          ><small
+                            >Por favor marque todos los camos requeridos</small
+                          ></span
+                        >
+                      </mat-action-row>
+                    </mat-expansion-panel>
+                  </div>
+                  <div class="col-md-12 my-2">
+                    <mat-expansion-panel [expanded]="false">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <span class="acoordion-title"
+                            >INFORMACION DE CONTACTO</span
+                          >
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <mat-select placeholder="Nacionalida *">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <mat-select placeholder="Departamento *">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <mat-select placeholder="Municipio *">
+                              <mat-option>None</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <input matInput placeholder="Telefono Personal *" />
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <mat-form-field>
+                            <input matInput placeholder="Telefono de Oficina *" />
+                          </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                          <mat-form-field>
+                            <input matInput placeholder="Dirección *" />
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <mat-action-row>
+                        <span
+                          ><small
+                            >Por favor marque todos los camos requeridos</small
+                          ></span
+                        >
+                      </mat-action-row>
+                    </mat-expansion-panel>
+                  </div>
+                </div>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: auto; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.fill-remaining-space {    
+    flex: auto;
+}
+
+form.normal-form {    
+    height: auto;  
+}
+.controles-container {
+    width: 100%;  
+    margin: auto; 
+    height: 100%;       
+}
+.controles-container>* {
+    width: 100%;   
+}
+.add-bottom-padding {
+    padding-bottom: 10px;
+}
+mat-radio-group mat-radio-button {
+    margin-left: 8px;
+}
+body {
+    overflow-x: hidden;    
+    margin-bottom: 40px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+mat-expansion-panel{
+    width: 100%;
+}
+
+mat-expansion-panel-header{
+    background-color: white;
+}
+
+mat-expansion-panel-header:hover{
+    background-color: white  !important;
+}
+
+.fila{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.card .card-body{
+    background-color: #F5F5F5;
+}
+.acoordion-title{
+    color: #53B5EB;
+}
+table {
+    width: 100%;
+  }
+
+.sisben{
+    margin-top: 50px;
+}
+
+
